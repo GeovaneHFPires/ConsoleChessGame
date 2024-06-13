@@ -56,9 +56,8 @@ public class Board {
 		piece.position = position;
 	}
 	
-	public boolean positionExists(int row, int column) {
-		return row < this.rows && column < this.columns 
-				&& this.rows > 0 && this.columns > 0;
+	private boolean positionExists(int row, int column) {
+		return row >= 0 && row < rows && column >= 0 && column < columns;
 	}
 	
 	public boolean positionExists(Position position) {
