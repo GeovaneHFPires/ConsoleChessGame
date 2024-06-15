@@ -28,7 +28,7 @@ public class Rook extends ChessPiece {
 		
 		Position p = new Position(0, 0);
 		
-		// above
+		// N
 		p.setValues(position.getRow() - 1, position.getColumn());
 		while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
@@ -38,7 +38,7 @@ public class Rook extends ChessPiece {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 		
-		// left
+		// O
 		p.setValues(position.getRow(), position.getColumn() - 1);
 		while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
@@ -48,7 +48,7 @@ public class Rook extends ChessPiece {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 		
-		// right
+		// E
 		p.setValues(position.getRow(), position.getColumn() + 1);
 		while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
@@ -58,7 +58,7 @@ public class Rook extends ChessPiece {
 			mat[p.getRow()][p.getColumn()] = true;
 		}
 		
-		// below
+		// S
 		p.setValues(position.getRow() + 1, position.getColumn());
 		while (getBoard().positionExists(p) && !getBoard().thereIsAPiece(p)) {
 			mat[p.getRow()][p.getColumn()] = true;
